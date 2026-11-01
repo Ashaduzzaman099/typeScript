@@ -25,3 +25,16 @@ const greetings = (fullName: string, greeting ="Hello" )=>{
   console.log(greeting+ " " +fullName)
 }
 greetings("Ashik")
+
+// Rest Parameter
+const sum = (...numbers:number[]){
+  return numbers.reduce((total,sum)=> total + sum,0);
+}
+
+sum(1,2,3,5,3);
+
+const logUserAction = (...args:[name:string, age:number, isActive:boolean])=>{
+  const [name, age, isActive] =args;
+  console.log(name+ " is " + age);
+}
+logUserAction("Ashik", 25, true);
