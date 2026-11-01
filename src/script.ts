@@ -38,3 +38,17 @@ const logUserAction = (...args:[name:string, age:number, isActive:boolean])=>{
   console.log(name+ " is " + age);
 }
 logUserAction("Ashik", 25, true);
+
+// Object type, type alias and interface
+const user: {
+  name: string;
+  age: number;
+  isActive: boolean;
+  action: ()=>void;
+  badges: string[];
+} = {
+  name: "Ashik",
+  age: 26,
+  isActive: true,
+  
+}
