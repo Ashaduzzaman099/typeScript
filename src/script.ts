@@ -27,8 +27,8 @@ const greetings = (fullName: string, greeting ="Hello" )=>{
 greetings("Ashik")
 
 // Rest Parameter
-const sum = (...numbers:number[]){
-  return numbers.reduce((total,sum)=> total + sum,0);
+const sum = (...numbers:number[])=>{
+  return numbers.reduce((total, sum) => total + sum, 0);
 }
 
 sum(1,2,3,5,3);
