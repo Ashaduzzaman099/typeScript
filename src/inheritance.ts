@@ -3,7 +3,7 @@
 class Employee1{
     constructor(
         public name: string,
-        private _baseSalary: number){}
+        protected _baseSalary: number){}
 
     get baseSalary(): number{
         return this._baseSalary;
@@ -27,11 +27,15 @@ class Employee1{
 }
 
 class Manager extends Employee1{
-    teamSize: number;
-
-    constructor(name: string, _baseSalary: number, teamSize: number){
+    constructor(name: string, _baseSalary: number, public teamSize: number){
         super(name, _baseSalary);
-        this.teamSize = teamSize;
+    }
+    describeWork(){
+        return `${this.name} manages a team of ${this.teamSize} members.`;
+
+    }
+    describeManager(): string{
+        return `${this.name} earns a base salary of ${this._baseSalary} and manages a team of ${this.teamSize} members.`;
     }
 }
 
@@ -39,4 +43,5 @@ const employe = new Employee1("Ashik", 50000);
 const employe1 = new Employee1("Shohan", 50000);
 const manager = new Manager("Rahat", 30000, 15)
 
-console.log(employe.salaryWithBonus);
+console.log(manager.describe());
+// console.log(employe.salaryWithBonus);
