@@ -1,6 +1,7 @@
 class Employee{
     name: string;
-    baseSalary: number;
+    public readonly baseSalary: number;
+    
 
     constructor(name: string, baseSalary:number){
         this.name = name;
@@ -13,3 +14,6 @@ const employee1 = new Employee("Shohan", 50000);
 
 console.log(employee);
 console.log(employee1);
+
+
+// Access Modifiers: public, private, protected, readonly
