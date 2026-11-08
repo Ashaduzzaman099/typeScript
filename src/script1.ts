@@ -5,4 +5,4 @@
 // import "./generic.js";
 // import "./class-vs-object.js";
 // import "./inheritance.js";
-import "./polimorphism.js";
+import "./minidom.js";
