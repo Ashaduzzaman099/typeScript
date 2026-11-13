@@ -4,5 +4,5 @@
 // import "./v1-module-config.js";
 // import "./generic.js";
 // import "./class-vs-object.js";
-// import "./inheritance.js";
+import "./inheritance.js";
 // import "./minidom.js";
